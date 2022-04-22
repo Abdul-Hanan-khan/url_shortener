@@ -18,7 +18,7 @@ class UrlShortenerScreen extends StatelessWidget {
         width: double.infinity,
         child: Column(
           children: [
-            Spacer(),
+            const Spacer(),
             Text(
               "URL Shortner",
               style: TextStyle(
@@ -27,14 +27,14 @@ class UrlShortenerScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
+            const Text(
               // "Shorten your long URL quickly",
               "Shorten your long URL quickly",
               style: TextStyle(
                 color: Colors.grey,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
             TextField(
@@ -42,14 +42,14 @@ class UrlShortenerScreen extends StatelessWidget {
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(color: Colors.transparent),
+                  borderSide: const BorderSide(color: Colors.transparent),
                 ),
                 filled: true,
                 fillColor: Colors.grey[200],
                 hintText: "Paste the Link",
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Builder(
@@ -58,18 +58,18 @@ class UrlShortenerScreen extends StatelessWidget {
                 onTap: () {
                   Clipboard.setData(ClipboardData(text: state.shortUrlMessage))
                       .whenComplete(() => Scaffold.of(context).showSnackBar(
-                      SnackBar(content: Text("Link is copied"))));
+                      const SnackBar(content: Text("Link is copied"))));
                 },
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Container(
               width: double.infinity,
               child: FlatButton(
                 onPressed: () {
                   state.handleGetLinkButton();
                 },
-                child: state.loading?CircularProgressIndicator(color: Colors.white,): Text("GET LINK"),
+                child: state.loading?CircularProgressIndicator(color: Colors.white,): const Text("GET LINK"),
                 color: Colors.blue,
                 textColor: Colors.white,
                 padding:

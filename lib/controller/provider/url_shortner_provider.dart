@@ -18,7 +18,7 @@ class UrlShortenerState extends ChangeNotifier {
     notifyListeners();
     shortUrlMessage = "$shortUrl";
 
-    notifyListeners();
+    // notifyListeners();
 
   }
 
